@@ -1,0 +1,5 @@
+https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.259/presto-server-0.259.tar.gz
+
+docker build --build-arg PRESTO_VERSION=0.259 . -t prestodb:latest
+docker run -d -p 127.0.0.1:8080:8080 --name presto prestodb:latest
+docker run --name presto prestodb:latest
