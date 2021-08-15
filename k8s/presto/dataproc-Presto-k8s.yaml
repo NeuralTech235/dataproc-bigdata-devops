@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foursys-presto-deployment
+  namespace: foursys-bigdata-poc
+  labels:
+    app: foursys-presto
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: foursys-presto
+  template:
+    metadata:
+      labels:
+        app: foursys-presto
+    spec:
+      containers:
+      - name: foursys-presto
+        image: neuraltech/presto:latest
+        ports:
+        - containerPort: 8080
