@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foursys-nifi-registry-deployment
+  namespace: foursys-bigdata-poc
+  labels:
+    app: foursys-nifi-registry
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: foursys-nifi-registry
+  template:
+    metadata:
+      labels:
+        app: foursys-nifi-registry
+    spec:
+      containers:
+      - name: foursys-nifi-registry
+        image: apache/nifi-registry
+        ports:
+        - containerPort: 18080
+        - containerPort: 18443
+        env:
+        - name: NIFI_REGISTRY_WEB_HTTP_PORT
+          value: '18080'
+        - name: NIFI_REGISTRY_WEB_HTTPS_PORT
+          value: '18443'

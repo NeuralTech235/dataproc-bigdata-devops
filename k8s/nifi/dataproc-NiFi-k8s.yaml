@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foursys-nifi-deployment
+  namespace: foursys-bigdata-poc
+  labels:
+    app: foursys-nifi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: foursys-nifi
+  template:
+    metadata:
+      labels:
+        app: foursys-nifi
+    spec:
+      containers:
+      - name: foursys-nifi
+        image: apache/nifi
+        ports:
+        - containerPort: 8080
+        - containerPort: 9443
+        env:
+        - name: NIFI_WEB_HTTP_PORT
+          value: '8080'
+        - name: NIFI_WEB_HTTPS_PORT
+          value: '9443'
