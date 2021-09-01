@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foursys-hive-deployment
+  namespace: safrapay-bigdata-poc
+  labels:
+    app: foursys-hive
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: foursys-hive
+  template:
+    metadata:
+      labels:
+        app: foursys-hive
+    spec:
+      volumes:
+      - name: fileshare-dls
+        azureFile:
+          secretName: storage-secret-dls
+          shareName: nifi
+          readOnly: false
+      containers:
+      - name: foursys-hive
+        image: starburstdata/starburst-enterprise
+        ports:
+        - containerPort: 8080
+      volumeMounts:
+          - name: fileshare-dls
+            mountPath: /opt/metastore/

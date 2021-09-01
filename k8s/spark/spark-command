@@ -1,0 +1,4 @@
+./pyspark --master local[2]
+
+./spark-shell --master spark://40.88.198.163:7077
+

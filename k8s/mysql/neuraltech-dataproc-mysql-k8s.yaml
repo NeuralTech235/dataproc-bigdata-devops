@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foursys-mysql-metastore-deployment
+  namespace: foursys-bigdata-poc
+  labels:
+    app: foursys-mysql-metastore
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: foursys-mysql-metastore
+  template:
+    metadata:
+      labels:
+        app: foursys-mysql-metastore
+    spec:
+      containers:
+      - name: foursys-mysql-metastore
+        image: mysql/mysql-server:latest
+        ports:
+        - containerPort: 3306
+          name: mysql        
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: LXAgYWRtaW4K
+        resources: {}

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foursys-hive-deployment
+  namespace: foursys-bigdata-poc
+  labels:
+    app: foursys-hive
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: foursys-hive
+  template:
+    metadata:
+      labels:
+        app: foursys-hive
+    spec:
+      containers:
+      - name: foursys-hive
+        image: neuraltech/hive:1.0.5
+        ports:       
+          - containerPort: 9083

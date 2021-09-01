@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+      <property>
+         <name>hive.metastore.schema.verification</name>
+         <value>true</value>
+      </property>
+     <property>
+        <name>hive.metastore.warehouse.dir</name>
+        <value>file:///tmp</value>
+        <description></description>
+     </property>
+     <property>
+        <name>fs.default.name</name>
+        <value>file:///tmp</value>
+     </property>     
+     <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:mysql://20.62.151.53:3306/metastore?createDatabaseIfNotExist=TRUE&amp;useSSL=FALSE&amp;allowPublicKeyRetrieval=TRUE</value>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>com.mysql.cj.jdbc.Driver</value>
+    </property>
+    <property>
+      <name>javax.jdo.option.ConnectionUserName</name>
+      <value>hive01</value>
+   </property>
+   <property>
+      <name>javax.jdo.option.ConnectionPassword</name>
+      <value>hivepwd</value>
+   </property>
+   <property>
+      <name>datanucleus.schema.autoCreateAll</name>
+      <value>true</value>
+   </property>
+</configuration>

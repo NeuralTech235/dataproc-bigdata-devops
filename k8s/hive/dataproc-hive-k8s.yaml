@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foursys-hive-deployment
+  namespace: foursys-bigdata-poc
+  labels:
+    app: foursys-hive
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: foursys-hive
+  template:
+    metadata:
+      labels:
+        app: foursys-hive
+    spec:
+      containers:
+      - name: foursys-hive
+        image: mr3project/hivemr3-all:1.2
+        ports:       
+          - containerPort: 9852
+          - containerPort: 6080
+          - containerPort: 6083
+          - containerPort: 8188          
+        env:
+        - name: HIVE_SERVER2_PORT
+          value: '19852'
+        - name: HIVE_SERVER2_HTTP_PORT
+          value: '10001'
+        - name: HIVE_SERVER2_THRIFT_PORT
+          value: '10000'
+        - name: HIVE_SERVER2_WEBUI_PORT
+          value: '10002'

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spark-master-deployment
+  namespace: foursys-bigdata-poc
+  labels:
+    app: spark-master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spark-master
+  template:
+    metadata:
+      labels:
+        app: spark-master
+    spec:
+      containers:
+      - name: safrapay-dataproc-spark-master
+        image: neuraltech/spark:3.1.2
+        ports:
+        - containerPort: 8080
+        - containerPort: 7077
