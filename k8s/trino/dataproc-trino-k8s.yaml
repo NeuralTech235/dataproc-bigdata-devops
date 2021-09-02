@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foursys-trino-deployment
+  namespace: foursys-bigdata-poc
+  labels:
+    app: foursys-trino
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: foursys-trino
+  template:
+    metadata:
+      labels:
+        app: foursys-trino
+    spec:
+      containers:
+      - name: foursys-trino
+        image: trinodb/trino:latest
+        ports:
+        - containerPort: 8080

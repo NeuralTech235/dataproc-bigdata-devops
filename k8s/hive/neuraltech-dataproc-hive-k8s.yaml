@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: foursys-hive
-        image: neuraltech/hive:1.0.5
+        image: neuraltech/hive:1.0.0
         ports:       
           - containerPort: 9083
