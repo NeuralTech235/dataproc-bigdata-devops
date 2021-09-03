@@ -21,7 +21,12 @@ RUN wget https://downloads.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.ta
     rm -f hadoop-3.3.1.tar.gz
     
 COPY conf ${HIVE_HOME}/conf
+
 Copy driverdb/mysql-connector-java-8.0.26.jar /opt/hive/lib
+Copy driverdb/ojdbc8.jar /opt/hive/lib
+Copy driverdb/mssql-jdbc-9.4.0.jre8.jar /opt/hive/lib
+Copy driverdb/mssql-jdbc-9.4.0.jre11.jar /opt/hive/lib
+Copy driverdb/mssql-jdbc-9.4.0.jre16.jar /opt/hive/lib
 
 RUN groupadd -r hive --gid=1000 && \
     useradd -r -g hive --uid=1000 -d ${HIVE_HOME} hive && \
