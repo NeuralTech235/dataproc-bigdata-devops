@@ -36,6 +36,6 @@
    </property>
    <property>
       <name>datanucleus.schema.autoCreateAll</name>
-      <value>false</value>
+      <value>true</value>
    </property>
 </configuration>
