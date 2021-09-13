@@ -32,6 +32,7 @@ RUN wget -q https://downloads.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1
 COPY adls2libs/azure-data-lake-store-sdk-2.3.9.jar /opt/hadoop/share/hadoop/tools/lib/
 COPY adls2libs/hadoop-azure-datalake-3.3.1.jar /opt/hadoop/share/hadoop/tools/lib/
 COPY hadoop/core-site.xml /opt/hadoop/etc/hadoop/core-site.xml
+COPY hadoop/hadoop-env.sh /opt/hadoop/etc/hadoop/hadoop-env.sh
 
 RUN groupadd -r hadoop --gid=1001 && \
     useradd -r -g hadoop --uid=1001 -d ${HADOOP_HOME} hadoop && \

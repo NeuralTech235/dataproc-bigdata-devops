@@ -1,0 +1,13 @@
+az storage account create \
+ --name dataproc \
+ --resource-group SafraPay
+ --location "East US" \
+ --sku Standard_RAGRS \
+ --kind StorageV2
+ =================================================================================
+ az storage account show-connection-string --name dataproc
+ {
+  "connectionString": "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=dataproc;AccountKey=FpivSrA6v6auZgi6gGAA+tiuFFBkYFOxfQg7fkFtdfCWGILgavq8AZ8H1PeX3iaV69W9QycGcRwGrxB7PNUIpQ=="
+}
+
+==================================================================================

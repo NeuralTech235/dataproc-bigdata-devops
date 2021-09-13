@@ -14,27 +14,23 @@
         <name>fs.default.name</name>
         <value>file:///tmp</value>
      </property>     
-     <property>
+    <property>
         <name>javax.jdo.option.ConnectionURL</name>
-        <value>jdbc:mysql://20.62.151.53:3306/metastoredb?createDatabaseIfNotExist=true</value>
+        <value>jdbc:sqlserver://10.7.8.245:1433/DatabaseName=hivedb;useSSL=FALSE&amp;</value>
     </property>
     <property>
         <name>javax.jdo.option.ConnectionDriverName</name>
-        <value>com.mysql.cj.jdbc.Driver</value>
+        <value>com.microsoft.sqlserver.jdbc.SQLServerDriver</value>
     </property>
-    <property>    
-      <name>javax.jdo.option.ConnectionUserName</name>
-      <value>hive01</value>
-   </property>
-   <property>
-      <name>javax.jdo.option.ConnectionPassword</name>
-      <value>hivepwd</value>
-   </property>
-   <property>
-      <name>hive.metastore.db.type</name>
-      <value>mysql</value>   
-   </property>
-   <property>
+    <property>
+        <name>javax.jdo.option.ConnectionUserName</name>
+        <value>svc-hivedb</value>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionPassword</name>
+        <value>Safrapay#2021</value>
+    </property>    
+    <property>
       <name>datanucleus.schema.autoCreateAll</name>
       <value>false</value>
    </property>

@@ -29,13 +29,9 @@
     <property>
         <name>javax.jdo.option.ConnectionPassword</name>
         <value>Safrapay#2021</value>
-    </property>
-    <property>
-        <name>hive.metastore.db.type</name>
-        <value>mssql</value>   
-    </property>   
+    </property>    
     <property>
       <name>datanucleus.schema.autoCreateAll</name>
-      <value>true</value>
+      <value>false</value>
    </property>
 </configuration>

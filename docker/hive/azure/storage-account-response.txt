@@ -1,0 +1,91 @@
+{
+  "accessTier": "Hot",
+  "allowBlobPublicAccess": null,
+  "allowCrossTenantReplication": null,
+  "allowSharedKeyAccess": null,
+  "azureFilesIdentityBasedAuthentication": null,
+  "blobRestoreStatus": null,
+  "creationTime": "2021-09-12T13:15:11.992278+00:00",
+  "customDomain": null,
+  "enableHttpsTrafficOnly": true,
+  "enableNfsV3": null,
+  "encryption": {
+    "encryptionIdentity": null,
+    "keySource": "Microsoft.Storage",
+    "keyVaultProperties": null,
+    "requireInfrastructureEncryption": null,
+    "services": {
+      "blob": {
+        "enabled": true,
+        "keyType": "Account",
+        "lastEnabledTime": "2021-09-12T13:15:12.101680+00:00"
+      },
+      "file": {
+        "enabled": true,
+        "keyType": "Account",
+        "lastEnabledTime": "2021-09-12T13:15:12.101680+00:00"
+      },
+      "queue": null,
+      "table": null
+    }
+  },
+  "extendedLocation": null,
+  "failoverInProgress": null,
+  "geoReplicationStats": null,
+  "id": "/subscriptions/767058c6-19a2-410d-b641-7aae493dd79c/resourceGroups/SafraPay/providers/Microsoft.Storage/storageAccounts/dataproc",
+  "identity": null,
+  "isHnsEnabled": null,
+  "keyCreationTime": {
+    "key1": "2021-09-12T13:15:12.101680+00:00",
+    "key2": "2021-09-12T13:15:12.101680+00:00"
+  },
+  "keyPolicy": null,
+  "kind": "StorageV2",
+  "largeFileSharesState": null,
+  "lastGeoFailoverTime": null,
+  "location": "eastus",
+  "minimumTlsVersion": null,
+  "name": "dataproc",
+  "networkRuleSet": {
+    "bypass": "AzureServices",
+    "defaultAction": "Allow",
+    "ipRules": [],
+    "resourceAccessRules": null,
+    "virtualNetworkRules": []
+  },
+  "primaryEndpoints": {
+    "blob": "https://dataproc.blob.core.windows.net/",
+    "dfs": "https://dataproc.dfs.core.windows.net/",
+    "file": "https://dataproc.file.core.windows.net/",
+    "internetEndpoints": null,
+    "microsoftEndpoints": null,
+    "queue": "https://dataproc.queue.core.windows.net/",
+    "table": "https://dataproc.table.core.windows.net/",
+    "web": "https://dataproc.z13.web.core.windows.net/"
+  },
+  "primaryLocation": "eastus",
+  "privateEndpointConnections": [],
+  "provisioningState": "Succeeded",
+  "resourceGroup": "SafraPay",
+  "routingPreference": null,
+  "sasPolicy": null,
+  "secondaryEndpoints": {
+    "blob": "https://dataproc-secondary.blob.core.windows.net/",
+    "dfs": "https://dataproc-secondary.dfs.core.windows.net/",
+    "file": null,
+    "internetEndpoints": null,
+    "microsoftEndpoints": null,
+    "queue": "https://dataproc-secondary.queue.core.windows.net/",
+    "table": "https://dataproc-secondary.table.core.windows.net/",
+    "web": "https://dataproc-secondary.z13.web.core.windows.net/"
+  },
+  "secondaryLocation": "westus",
+  "sku": {
+    "name": "Standard_RAGRS",
+    "tier": "Standard"
+  },
+  "statusOfPrimary": "available",
+  "statusOfSecondary": "available",
+  "tags": {},
+  "type": "Microsoft.Storage/storageAccounts"
+}
