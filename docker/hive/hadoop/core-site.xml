@@ -16,57 +16,12 @@
 
 <!-- Put site-specific property overrides in this file. -->
 <configuration>
-    <property>
-        <name>dfs.adls.oauth2.access.token.provider.type</name>
-        <value>ClientCredential</value>
-  </property>  
   <property>
-      <name>dfs.adls.oauth2.refresh.url</name>
-      <value>YOUR TOKEN ENDPOINT</value>
+    <name>fs.azure.account.auth.type.abfswales1.dfs.core.windows.net</name>
+    <value>SharedKey</value>  
   </property>
   <property>
-      <name>dfs.adls.oauth2.client.id</name>
-      <value>YOUR CLIENT ID</value>
+    <name>fs.azure.account.key.uses1d1stadla01.dfs.core.windows.net</name>
+    <value>a2p/bilbsgkzreNYQ0+Bb+Pe9YkMNmy4dI1QcmXbkA/FgZMFLm3lE6AxWbZ27nFoFbq43Dg2/WZV60Dh5PFevg==</value>
   </property>
-  <property>
-      <name>dfs.adls.oauth2.credential</name>
-      <value>YOUR CLIENT SECRET</value>
-  </property>
-  <property>
-      <name>fs.adl.impl</name>
-      <value>org.apache.hadoop.fs.adl.AdlFileSystem</value>
-  </property>
-  <property>
-      <name>fs.AbstractFileSystem.adl.impl</name>
-      <value>org.apache.hadoop.fs.adl.Adl</value>
-  </property>
-  <property>
-      <name>fs.defaultFS</name>
-      <value>hdfs://localhost:9000</value>
-  </property>
-  
-  <!-- <property>
-  <name>fs.azure.account.auth.type</name>
-  <value>OAuth</value>
-</property>
-
-<property>
-  <name>fs.azure.account.oauth.provider.type</name>
-  <value>org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider</value>
-</property>
-
-<property>
-  <name>fs.azure.account.oauth2.client.id</name>
-  <value>azureclientid</value>
-</property>
-
-<property>
-  <name>fs.azure.account.oauth2.client.secret</name>
-  <value>azureclientsecret</value>
-</property>
-
-<property>
-  <name>fs.azure.account.oauth2.client.endpoint</name>
-  <value>https://login.microsoftonline.com/${azure_tenant_id}/oauth2/token</value>
-</property>   -->
 </configuration>

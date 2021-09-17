@@ -34,6 +34,9 @@ COPY adls2libs/hadoop-azure-datalake-3.3.1.jar /opt/hadoop/share/hadoop/tools/li
 COPY hadoop/core-site.xml /opt/hadoop/etc/hadoop/core-site.xml
 COPY hadoop/hadoop-env.sh /opt/hadoop/etc/hadoop/hadoop-env.sh
 
+ENV HADOOP_CLASSPATH=$HADOOP_CLASSPATH:/opt/hadoop/share/hadoop/tools/lib/*
+ENV HADOOP_OPTIONAL_TOOLS=hadoop-azure
+
 RUN groupadd -r hadoop --gid=1001 && \
     useradd -r -g hadoop --uid=1001 -d ${HADOOP_HOME} hadoop && \
     chown hadoop:hadoop -R ${HADOOP_HOME}

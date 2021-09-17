@@ -2,6 +2,11 @@
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <configuration>
       <property>
+         <name>hive.metastore.uris</name>
+         <value>thrift://127.0.0.1:9083</value>
+         <description>Thrift URI for the remote metastore. Used by metastore client to connect to remote metastore.</description>
+      </property>
+      <property>
          <name>hive.metastore.schema.verification</name>
          <value>true</value>
       </property>
@@ -16,7 +21,7 @@
      </property>     
     <property>
         <name>javax.jdo.option.ConnectionURL</name>
-        <value>jdbc:sqlserver://10.7.8.245:1433/DatabaseName=hivedb;useSSL=FALSE&amp;</value>
+        <value>jdbc:sqlserver://10.7.8.245:1433;DatabaseName=hivedb;</value>
     </property>
     <property>
         <name>javax.jdo.option.ConnectionDriverName</name>
@@ -29,9 +34,5 @@
     <property>
         <name>javax.jdo.option.ConnectionPassword</name>
         <value>Safrapay#2021</value>
-    </property>    
-    <property>
-      <name>datanucleus.schema.autoCreateAll</name>
-      <value>false</value>
-   </property>
+    </property>
 </configuration>
